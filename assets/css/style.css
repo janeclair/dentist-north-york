@@ -1,0 +1,31 @@
+/* Simple clean styles for the weather/time widget */
+:root{
+  --bg:#f6fbff;
+  --card:#ffffff;
+  --accent:#0b84ff;
+  --muted:#6b7280;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#ffffff);
+  margin:0;padding:24px;color:#0f172a;
+}
+.container{max-width:720px;margin:0 auto}
+header{display:flex;flex-direction:column;gap:6px}
+header h1{margin:0;font-size:1.6rem}
+.tag{color:var(--muted);margin:0}
+.controls{display:flex;gap:8px;align-items:center;margin-top:12px}
+.controls select, .controls button{padding:8px 10px;border-radius:8px;border:1px solid #e6eef8;background:var(--card)}
+.result{background:var(--card);border-radius:var(--radius);padding:18px;margin-top:16px;box-shadow:0 6px 18px rgba(11,132,255,0.06)}
+.place{font-weight:600;font-size:1.1rem}
+.time{font-size:1.4rem;margin:6px 0;color:var(--accent)}
+.weather{display:flex;gap:12px;align-items:center}
+.weather img{width:64px;height:64px}
+.details{display:flex;flex-direction:column}
+#temp{font-size:1.3rem;font-weight:700}
+#desc{color:var(--muted)}
+.status{margin-top:8px;color:var(--muted)}
+footer{margin-top:14px;color:var(--muted);font-size:0.9rem}
+@media (max-width:520px){.weather img{width:50px;height:50px}}
